@@ -21,6 +21,12 @@ To always activate a snippets set for given filetype, just use the following in 
 autocmd FileType php set ft=php.symfony
 }}}
 
+if you want to always enable snippets in a given file, just add following line at the end:
+
+{{{
+" vim:ft=xml.propelxml
+}}}
+
 ## deploy snippets ##
 
 You can find a shell script packaged with the plugin, just execute it from anywhere to 
@@ -29,3 +35,4 @@ copy snippets included with this repo to your ~/.vim directory
 {{{
 $ ./vim-snippets-update
 }}}
+
