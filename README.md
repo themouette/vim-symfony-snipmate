@@ -14,9 +14,7 @@ to activate xml propel snippets, just do
 
 To always activate a snippets set for given filetype, just use the following in your .vimrc
 
-{{{
   autocmd FileType php set ft=php.symfony
-}}}
 
 if you want to always enable snippets in a given file, just add following line at the end:
 
