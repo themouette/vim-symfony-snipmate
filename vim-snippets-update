@@ -2,12 +2,14 @@
 # deploy the current plugin to vim repository 
 # credit julien muetton <julien_muetton@carpe-hora.com>
 
-# read current file real path
-SCRIPT_PATH=`readlink -f $0` ;
-REPONAME=`dirname $SCRIPT_PATH`;
-SCRIPTNAME=`echo "$SCRIPT_PATH" | sed "s:^.*/\([^\/]*\)$:\1:"`
+#current path as argument ?
+REPONAME="$1";
+if [ -z "$REPONAME" ]
+then
+  REPONAME=`dirname $0`
+fi
 
-ls $REPONAME | grep -v $SCRIPTNAME | while read file 
+ls $REPONAME | grep -v "vim-snippets-" | grep -v "README" | while read file 
 do
   cp -R $REPONAME/$file ~/.vim
 done;
