@@ -2,6 +2,8 @@ snippet requ
 	$this->getRequestParameter("${1}");${2}
 snippet fw
 	$this->forward("${1}", "${2}");${3}
+snippet fw404
+	$this->forward404${1}(${2}, "${3}");
 snippet red
 	$this->redirect("${1}");${2}
 snippet verror 
@@ -93,3 +95,11 @@ snippet execute
 	{
 		${3}
 	}${4}
+snippet getFlash
+	$this->getUser()->getFlash(${1:nameFlash});
+snippet setFlash
+	$this->getUser()->setFlash(${1:nameFlash});
+snippet hasFlash
+	$this->getUser()->hasFlash(${1:nameFlash});
+snippet log
+	sfContext::getInstance()->getLogger()->${1:info}('${2:msg}');
