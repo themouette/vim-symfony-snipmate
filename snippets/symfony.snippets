@@ -11,15 +11,6 @@ snippet verror
 snippet serror 
 	$this->getRequest()->setError("${1}, "${2}");$3}
 
-snippet partial 
-	<?php include_partial("${1}") ?>${2}
-snippet component #1 include a component in a template
-	<?php include_component("${1}", "${2}") ?>${3}
-snippet slot 
-	<?php include_slot("${1}") ?>
-		${2}
-	<?php end_slot() ?>${3}
-
 snippet newc 
 	$c = new Criteria();${1}
 snippet add 
@@ -111,7 +102,7 @@ snippet action
 			${5}
 		}
 	} // end of $1Action
-snippet component #2 new component class
+snippet component
 	<?php
 	/**
 	 * This file declare the $1 component.
@@ -184,6 +175,7 @@ snippet hasFlash
 	$this->getUser()->hasFlash(${1:nameFlash});
 snippet log
 	sfContext::getInstance()->getLogger()->${1:info}('${2:msg}');
+# set the autoload for template helpers into the file
 snippet set_template
 	<?php 
 	//vim:ft=php.html.sftemplate

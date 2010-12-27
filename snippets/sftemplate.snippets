@@ -22,3 +22,11 @@ snippet iforeach
 	<?php foreach($${1:variable} as $${2:key}): ?>
 		${3:// code...}
 	<?php endforeach; ?>
+snippet partial 
+	<?php include_partial("${1}") ?>${2}
+snippet component
+	<?php include_component("${1}", "${2}") ?>${3}
+snippet slot 
+	<?php include_slot("${1}") ?>
+		${2}
+	<?php end_slot() ?>${3}
