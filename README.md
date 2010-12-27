@@ -33,3 +33,9 @@ copy snippets included with this repo to your ~/.vim directory
 
   $ ./vim-snippets-update
 
+## work with symfony snipets
+
+when you are editing / creating a template, to always benefit of the sftemplate snipets, but also the
+html snippets, just use the **set_template** snippet in your file, then reload the file.
+
+from now on, everytime you are editing this file, snippets will be loaded.
