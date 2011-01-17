@@ -170,9 +170,13 @@ snippet execute
 snippet getFlash
 	$this->getUser()->getFlash(${1:nameFlash});
 snippet setFlash
-	$this->getUser()->setFlash(${1:nameFlash});
+	$this->getUser()->setFlash(${1:nameFlash},${2:value},${3:true});
 snippet hasFlash
 	$this->getUser()->hasFlash(${1:nameFlash});
+snippet	getAttribute
+	$this->getUser()->getAttribute(${1:nameAttribute});
+snippet	setAttribute
+	$this->getUser()->setAttribute(${1:nameAttribute}, ${2:value});
 snippet log
 	sfContext::getInstance()->getLogger()->${1:info}('${2:msg}');
 # set the autoload for template helpers into the file
